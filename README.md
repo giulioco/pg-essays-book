@@ -10,6 +10,56 @@ Make yourself a real, well-designed book of fifty Paul Graham essays and print a
 
 > **Unofficial.** This project isn't affiliated with or endorsed by Paul Graham or Y Combinator. The repo contains **no essay text**: the build script downloads the essays from [paulgraham.com](https://paulgraham.com) on your own computer, for your own copy. See [Copyright](#copyright).
 
+## The fastest way: let an AI agent do it
+
+Paste this into an AI agent that can run commands on your computer and control your browser, such as Claude Code with Claude in Chrome. Sign in to [lulu.com](https://www.lulu.com) first.
+
+The agent builds the book, sets up a **private** Lulu project, uploads the files and fills your cart. It stops twice: once for your shipping address, and again before payment.
+
+```text
+Help me print a personal copy of the book from https://github.com/giulioco/pg-essays-book
+on Lulu. Paperback unless I say hardcover. I'm signed in to lulu.com in my browser.
+
+1. Clone the repo, install Typst (brew install typst) and the Python requirements
+   (pip3 install -r requirements.txt), then run: python3 build.py
+   Read out/ORDER.md and keep its values at hand.
+
+2. In my browser, open https://www.lulu.com/create/print-books and click
+   "Start Making My Print Book".
+   - Product type: Print Book.
+   - Goal: "Print Your Book" (upload files and buy copies). NOT "Publish Your Book".
+   - Project title: Essays. Language: English. Book category: Business & Economics.
+   - Click "Design Your Project".
+
+3. Design step:
+   - Upload out/interior.pdf under "Interior File Upload". Lulu should read 495-ish pages.
+   - Book size: "US Trade (6 x 9 in / 152 x 229 mm)". A "Please select a Book Size" note
+     may stay on screen even after selecting it; it doesn't block anything.
+   - Specs: Standard Black & White, 60# Cream — Uncoated, Paperback Perfect Bound
+     (or Hardcover Case Wrap), Matte.
+   - Under "Upload Your Cover", read the required "Dimensions". If they differ from
+     out/ORDER.md (always the case for hardcover), run
+     python3 build.py --cover WIDTHxHEIGHT   (Lulu's numbers, in inches)
+     and use the new out/cover.pdf. Upload out/cover.pdf.
+   - If your browser tool can't upload files from the repo folder, copy the two PDFs
+     somewhere it can read and upload from there.
+   - In "Book Preview", check that cover text sits inside the safety zones and the spine
+     title is between the fold lines. Show me a screenshot.
+
+4. Click "Review Book", check the specs, click "Confirm and Publish" (under the
+   "Print Your Book" goal this stays private), then "Add to Cart". Quantity 1.
+
+5. Open the cart and click "Checkout". STOP at the shipping address form and let me fill it in.
+   When I say so, pick the cheapest tracked shipping, continue to the payment step,
+   and STOP. Summarize book, price, shipping, tax and total. I'll pay myself.
+
+Rules: never choose "Publish Your Book", retail sales, distribution or an ISBN. Never
+enter my personal or payment details. Don't try to get past security checks or
+CAPTCHAs: wait, or ask me. If anything on screen doesn't match these steps, stop and ask.
+```
+
+Prefer to do it yourself? Follow the steps below. [PRINTING.md](PRINTING.md) has the click-by-click guide.
+
 ## Three steps
 
 **1. Install** Python 3 and [Typst](https://github.com/typst/typst#installation):
@@ -32,7 +82,7 @@ This creates:
 | `out/cover.pdf` | the wraparound cover |
 | `out/ORDER.md` | the exact settings to pick on Lulu |
 
-**3. Print it on Lulu.** Follow **[PRINTING.md](PRINTING.md)**. It walks you through it by hand in about 15 minutes, or gives you a ready-made **prompt for an AI agent** that does the Lulu upload for you and stops before payment.
+**3. Print it on Lulu.** Follow **[PRINTING.md](PRINTING.md)**, which takes about 15 minutes by hand, or use the agent prompt above.
 
 ## What's inside
 

@@ -1,0 +1,92 @@
+{
+  "title": "Essays",
+  "author": "Paul Graham",
+  "parts": [
+    {
+      "title": "Work",
+      "essays": [
+        "greatwork",
+        "superlinear",
+        "love",
+        "hwh",
+        "own",
+        "procrastination",
+        "makersschedule",
+        "top",
+        "persistence",
+        "genius",
+        "fn",
+        "earnest"
+      ]
+    },
+    {
+      "title": "Thinking",
+      "essays": [
+        "think",
+        "say",
+        "identity",
+        "disagree",
+        "newideas",
+        "taste",
+        "conformism",
+        "ecw"
+      ]
+    },
+    {
+      "title": "Startups",
+      "essays": [
+        "startupideas",
+        "ds",
+        "growth",
+        "schlep",
+        "ambitious",
+        "before",
+        "aord",
+        "foundermode",
+        "relres",
+        "mean",
+        "wealth",
+        "13sentences"
+      ]
+    },
+    {
+      "title": "Making",
+      "essays": [
+        "hp",
+        "avg",
+        "head",
+        "copy"
+      ]
+    },
+    {
+      "title": "Writing",
+      "essays": [
+        "essay",
+        "simply",
+        "words",
+        "useful",
+        "talk",
+        "writes"
+      ]
+    },
+    {
+      "title": "Life",
+      "essays": [
+        "hs",
+        "nerds",
+        "cities",
+        "vb",
+        "stuff",
+        "kids",
+        "do"
+      ]
+    },
+    {
+      "title": "Coda",
+      "unnumbered": true,
+      "essays": [
+        "worked"
+      ]
+    }
+  ]
+}
